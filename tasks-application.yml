@@ -1,0 +1,29 @@
+spring:
+  appclication:
+    name: tasks-application
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tasks
+    username: mick
+    password: mick
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 0
+  servlet:
+    context-path: /tasks-application/
+
+kafka:
+  server: http://localhost:9092
+  groupId: constructor-task.1
+
+authentication:
+  jwt:
+    secretKey: 926D96C90030DD58429D2751AC1BDBBC
+
+
